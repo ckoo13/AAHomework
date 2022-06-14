@@ -32,3 +32,31 @@ class Queue
         @last_item
     end
 end
+
+
+#answer from demo
+# class MyQueue
+#     def initialize
+#         @store = []
+#     end
+
+#     def enqueue(ele)
+#         @store.unshift(ele)
+#         self
+#     end
+
+#     def dequeue
+#         @store.pop
+#     end
+
+#     def show
+#         p @store
+#         nil
+#     end
+
+#     def inspect
+#         "#<Queue: #{self.object_id}>"
+#     end
+
+# end
+
