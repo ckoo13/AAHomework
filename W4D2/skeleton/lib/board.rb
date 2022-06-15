@@ -35,21 +35,29 @@ class Board
   def make_move(start_pos, current_player_name)
     # debugger
     stones = @cups[start_pos]
+    #empty the selected cup
     @cups[start_pos].clear
     
+    #need to iterate from start_pos and place stones in each cup
+      #if it is a player cup (6 or 13)
+        #then only place if it is the current player's cup
+        #do not place if it is not current player's cup
     idx = start_pos
 
     while !stones.empty?
-      @cups[idx].push(stones.pop)
-      idx += 1
+      if @cup[idx] == current_player_name.side
     end
 
+
+    #call render at the end of each turn
     self.render
+
+    #call next_turn
   end
 
   def next_turn(ending_cup_idx)
     # helper method to determine whether #make_move returns :switch, :prompt, or ending_cup_idx
-    
+
   end
 
   def render
